@@ -17,15 +17,11 @@ public:
             cerr << "Error in opening database: " << sqlite3_errmsg(db) << endl;
             db = nullptr;
         } 
-        // else {
-        //     cout << "Connected to the database successfully!" << endl;
-        // }
     }
 
     ~TaskManager() {
         if (db) {
             sqlite3_close(db);
-            // cout << "Database connection closed." << endl;
         }
     }
 
@@ -51,7 +47,7 @@ public:
         if (onlyPending) {
             sql += " WHERE is_completed = 0";
         }
-        sql += " ORDER BY strftime('%Y-%m-%d', due_date) ASC;";  // Sort by due date in ascending order
+        sql += " ORDER BY strftime('%Y-%m-%d', due_date) ASC;";
 
         sqlite3_stmt* stmt;
 
@@ -121,7 +117,6 @@ public:
     bool checkForOverdueTasks() {
         if (!db) return false;
 
-        // Get current date in YYYY-MM-DD format
         time_t now = time(0);
         tm* ltm = localtime(&now);
         char currentDate[11];

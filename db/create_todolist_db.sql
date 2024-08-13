@@ -1,4 +1,3 @@
--- Create the tasks table
 CREATE TABLE tasks (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     task_name TEXT NOT NULL,
