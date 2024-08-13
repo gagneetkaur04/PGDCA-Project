@@ -22,3 +22,11 @@ STEP 4: Execute the app
 ```
 ./todo_app
 ```
+
+
+Dependencies :
+
+Linux OS
+```
+sudo apt-get install libsqlite3-dev
+```
