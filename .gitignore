@@ -1,3 +1,4 @@
 .vscode
 initialize_db
 todolist.db
+todo_app
