@@ -252,7 +252,7 @@ int main() {
                 break;
             case 4: {
                 cout << "Here are the current tasks:" << endl;
-                taskManager.viewTasks();
+                taskManager.viewTasks(true);
 
                 int taskId;
                 cout << endl;
